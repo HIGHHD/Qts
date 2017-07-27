@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>居间人返佣</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mclient">
+    <property name="title">
+     <string>客户信息管理</string>
+    </property>
+    <addaction name="actclientMng"/>
+    <addaction name="actrelaMng"/>
+   </widget>
+   <widget class="QMenu" name="mmedia">
+    <property name="title">
+     <string>居间信息管理</string>
+    </property>
+    <addaction name="actmediatorMng"/>
+    <addaction name="separator"/>
+    <addaction name="actrecomMng"/>
+    <addaction name="separator"/>
+    <addaction name="actagentMng"/>
+   </widget>
+   <widget class="QMenu" name="mtrade">
+    <property name="title">
+     <string>交易信息管理</string>
+    </property>
+    <addaction name="acDayImport"/>
+    <addaction name="separator"/>
+    <addaction name="acInfoExport"/>
+    <addaction name="separator"/>
+    <addaction name="acCrmExport"/>
+   </widget>
+   <widget class="QMenu" name="msystem">
+    <property name="title">
+     <string>系统管理</string>
+    </property>
+    <addaction name="actuser"/>
+    <addaction name="separator"/>
+    <addaction name="actdept"/>
+   </widget>
+   <addaction name="mclient"/>
+   <addaction name="mmedia"/>
+   <addaction name="mtrade"/>
+   <addaction name="msystem"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actuser">
+   <property name="text">
+    <string>用户管理</string>
+   </property>
+  </action>
+  <action name="actauth">
+   <property name="text">
+    <string>权限管理</string>
+   </property>
+  </action>
+  <action name="actdept">
+   <property name="text">
+    <string>部门管理</string>
+   </property>
+  </action>
+  <action name="actmediatorMng">
+   <property name="text">
+    <string>居间人信息管理</string>
+   </property>
+  </action>
+  <action name="actclientMng">
+   <property name="text">
+    <string>客户信息管理</string>
+   </property>
+  </action>
+  <action name="actrecomMng">
+   <property name="text">
+    <string>开发人信息管理</string>
+   </property>
+  </action>
+  <action name="actagentMng">
+   <property name="text">
+    <string>代理人信息管理</string>
+   </property>
+  </action>
+  <action name="actrelaMng">
+   <property name="text">
+    <string>客户关系管理</string>
+   </property>
+  </action>
+  <action name="acDayImport">
+   <property name="text">
+    <string>每日数据导入</string>
+   </property>
+  </action>
+  <action name="acInfoExport">
+   <property name="text">
+    <string>客户交易信息查询</string>
+   </property>
+  </action>
+  <action name="acCrmExport">
+   <property name="text">
+    <string>返佣数据查询</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

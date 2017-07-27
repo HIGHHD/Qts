@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="mediator">mediator.qss</file>
+    <file alias="user">image/user.png</file>
+    <file alias="select">image/select.png</file>
+    <file alias="star">image/star.png</file> 
+    <file alias="app">image/main.png</file>
+    <file alias="delete">image/delete.png</file>
+    <file alias="delsmall">image/delsmall.png</file>
+    <file alias="delsmallgray">image/delsmallgray.png</file>
+  </qresource>
+  <qresource prefix="/menu">
+    <file alias="userman">image/menu/usermanage.png</file>
+  </qresource>
+  <qresource prefix="/button">
+    <file alias="arrowDown">image/button/arrowDown.png</file>
+    <file alias="arrowUp">image/button/arrowUp.png</file>
+    <file alias="arrowDateDown">image/button/arrowDateDown.png</file>
+  </qresource>
+</RCC>

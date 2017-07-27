@@ -1,0 +1,10 @@
+﻿QComboBox#cbId QAbstractItemView::item{
+	height:40px;
+}
+QComboBox#cbId QAbstractItemView::item:selected {
+    color:#FFF000;
+}
+
+QListWidget::item:hover {
+    background: #BDD7FD;
+}
