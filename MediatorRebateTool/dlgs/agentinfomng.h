@@ -59,6 +59,7 @@ private slots:
     void show_custom_context_menu(const QPoint &pos);
     void opra_db(AgentInfo &instance, int save_type);
 
+    void on_tvIns_doubleClicked(const QModelIndex &index);
 };
 
 #endif // AGENTINFOMNG_H

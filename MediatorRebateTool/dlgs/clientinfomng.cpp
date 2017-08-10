@@ -118,6 +118,28 @@ void ClientInfoMng::show_custom_context_menu(const QPoint &pos)
     popMenu->exec(QCursor::pos());
 }
 
+
+void ClientInfoMng::on_tvIns_doubleClicked(const QModelIndex &index)
+{
+    int row = index.row();
+    if (row >=0) {
+        curIns.id = model.item(row, 0)->text();
+        curIns.name = model.item(row, 1)->text();
+        QString cl_type_str = model.item(row, 2)->text();
+        if (cl_type_str == QStringLiteral("个人户")) {
+            curIns.kind = 0;
+        } else if (cl_type_str == QStringLiteral("法人户")) {
+            curIns.kind = 1;
+        } else {
+            curIns.kind = -1;
+        }
+        QString op_date_str = model.item(row, 3)->text();
+        curIns.openDate = QDate::fromString(op_date_str, DB_DATE_FORMATE);
+
+        emit sendInfoToRelaMng(curIns);
+    }
+}
+
 void ClientInfoMng::on_cus_menu(QAction *ac)
 {
     int row = curRow;
@@ -271,3 +293,4 @@ void ClientInfoMng::on_btnGoNum_clicked()
         loadInstanceTable(id, name, start, end, curPageNum);
     }
 }
+

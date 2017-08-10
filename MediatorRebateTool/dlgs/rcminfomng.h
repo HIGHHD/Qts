@@ -58,6 +58,7 @@ private slots:
     void on_cus_menu(QAction *ac);
     void show_custom_context_menu(const QPoint &pos);
     void opra_db(RcmInfo &instance, int save_type);
+    void on_tvIns_doubleClicked(const QModelIndex &index);
 };
 
 #endif // RCMINFOMNG_H

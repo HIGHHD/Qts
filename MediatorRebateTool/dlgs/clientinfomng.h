@@ -67,6 +67,7 @@ private slots:
     void show_custom_context_menu(const QPoint &pos);
     void opra_db(ClientInfo &instance, int save_type);
     void on_btnClear_clicked();
+    void on_tvIns_doubleClicked(const QModelIndex &index);
 };
 
 #endif // CLIENTINFOMNG_H

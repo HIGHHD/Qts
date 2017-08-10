@@ -37,6 +37,8 @@ ClientInfoPop::ClientInfoPop(int save_type, ClientInfo &ins, QWidget *parent) :
             ui->cm_cl_kind->setCurrentIndex(0);
         }
         ui->de_firstdate->setDate(ins.openDate);
+    } else {
+        ui->de_firstdate->setDate(QDate::currentDate());
     }
 }
 

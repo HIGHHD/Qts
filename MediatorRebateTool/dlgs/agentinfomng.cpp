@@ -80,6 +80,20 @@ void AgentInfoMng::show_custom_context_menu(const QPoint &pos)
     popMenu->exec(QCursor::pos());
 }
 
+
+void AgentInfoMng::on_tvIns_doubleClicked(const QModelIndex &index)
+{
+    int row = index.row();
+    if (row >=0) {
+        curIns.id = model.item(row, 0)->text();
+        curIns.name = model.item(row, 1)->text();
+        curIns.deptName = model.item(row, 2)->text();
+        curIns.deptId = model.item(row, 3)->text();
+
+        emit sendInfoToRelaMng(curIns);
+    }
+}
+
 void AgentInfoMng::on_cus_menu(QAction *ac)
 {
     int row = curRow;
@@ -182,3 +196,4 @@ void AgentInfoMng::updateInsDept(StDept dept, StDept old)
     this->db_util->updateAgentInfo(dept, old);
     on_btnQuery_clicked();
 }
+

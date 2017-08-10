@@ -92,6 +92,28 @@ void BrokerInfoMng::show_custom_context_menu(const QPoint &pos)
     popMenu->exec(QCursor::pos());
 }
 
+
+void BrokerInfoMng::on_tvIns_doubleClicked(const QModelIndex &index)
+{
+    int row = index.row();
+    if (row >=0) {
+        curIns.id = model.item(row, 0)->text();
+        curIns.name = model.item(row, 1)->text();
+        QString cl_type_str = model.item(row, 2)->text();
+        if (cl_type_str == QStringLiteral("个人")) {
+            curIns.kind = 0;
+        } else if (cl_type_str == QStringLiteral("企业")) {
+            curIns.kind = 1;
+        } else {
+            curIns.kind = -1;
+        }
+        curIns.deptName = model.item(row, 3)->text();
+        curIns.deptId = model.item(row, 4)->text();
+
+        emit sendInfoToRelaMng(curIns);
+    }
+}
+
 void BrokerInfoMng::on_cus_menu(QAction *ac)
 {
     int row = curRow;
@@ -202,3 +224,4 @@ void BrokerInfoMng::updateInsDept(StDept dept, StDept old)
     this->db_util->updateBrokerInfo(dept, old);
     on_btnQuery_clicked();
 }
+

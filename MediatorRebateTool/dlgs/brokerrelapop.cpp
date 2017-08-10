@@ -35,6 +35,9 @@ BrokerRelaPop::BrokerRelaPop(ClientInfo& client, BrokerInfo& broker, QList<Broke
     if (this->insList.size() > 0) {
         ui->de_start->setDate(insList.at(0).startDate);
         ui->de_end->setDate(insList.at(0).endDate);
+    } else {
+        ui->de_start->setDate(QDate::currentDate());
+        ui->de_end->setDate(QDate::currentDate());
     }
 
     ui->la_cl_id->setText(client.id);
